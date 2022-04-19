@@ -13,11 +13,12 @@ public abstract class Appointment implements Comparable<Appointment>{
         this.endDate = endDate;
     }
 
-    @Override
-    public int compareTo(Appointment other){
+   // @Override
+   // public int compareTo(Appointment other){
         //TODO: Implement based on requirement
         //it will be ordered by start date first,then the end date, finally the description
-    }
+    //    return startDate - o.startDate;
+   // }
 
     public abstract boolean occursOn(LocalDate date);
 
