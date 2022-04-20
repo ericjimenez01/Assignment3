@@ -9,13 +9,6 @@ public class DailyAppointment extends Appointment {
 
     @Override
     public boolean occursOn(LocalDate date) {
-        if (date.isAfter(getStartDate()) && date.isBefore(getEndDate()))  {
-            // would date.isBefore(getEndDate()+1) make it inclusive?
-            return true;
-        }
-
-        else {
-            return false;
+        return inBetween(date) && getStartDate().getDayOfWeek() == date.getDayOfWeek();
         }
     }
-}
